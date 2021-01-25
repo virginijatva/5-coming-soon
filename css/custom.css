@@ -102,6 +102,11 @@ footer {
     color: #fff9;
 }
 
+footer .fa {
+    font-size: 100px;
+    color: white;
+}
+
 footer a {
     color: #fff;
     text-decoration: none;
