@@ -12,6 +12,13 @@ const socialsData = [
         href: '#'
     },
     {
+        icon: 'hantelis',
+        href: '#'
+    },
+    46546,
+    'sdcsce',
+    [],
+    {
         icon: 'tumblr',
         href: '#'
     },
