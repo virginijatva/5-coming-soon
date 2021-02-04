@@ -1,7 +1,7 @@
 /* basic style */
 
-.bg-blue {
-    background-color:#03A9F5;
+.bg-main {
+    background-color: var(--main-color);
 }
 
 /* hero section */
