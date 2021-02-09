@@ -1,6 +1,12 @@
+import { Validation } from './Validation.js';
+
+
 class Forms {
     constructor () {
         this.forms = [];
+
+        
+        const val = new Validation();
 
         this.init();
     }
@@ -27,7 +33,23 @@ class Forms {
                 event.preventDefault();
               
                 for (const input of allInputs) {
-                    console.log(input.value);
+                    const rule = input.dataset.validationRule;
+                    const text = input.value;
+
+                    switch (rule) {
+                        case 'name':
+                            console.log(Validation.isValidName(text));
+                            break;
+                            case 'email':
+                                console.log(Validation.isValidEmail(text));
+                                break;
+                                case 'text':
+                                    console.log(Validation.isValidText(text));
+                                    break;
+
+                            default:
+                                break;
+                    }
                 }
             })
         }

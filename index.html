@@ -27,7 +27,7 @@
             <p class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea maiores dolorem facilis vero atque eos culpa? Dolores quibusdam dolor aliquam.</p>
             <div class="clock"></div>
             <form class="form">
-                <input type="email" placeholder="Type your email">
+                <input data-validation-rule="email" type="email" placeholder="Type your email" required>
                 <button type="submit" class="btn">Subscribe now</button>
             </form>
             <div class="mouse">
@@ -49,9 +49,9 @@
         <h2 class="block-title">Have any question?</h2>
         <p class="block-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores alias perferendis nihil eos fuga soluta <a href="mailto:24-grupe@programuotojai.xyz">24&#8209;grupe@programuotojai.xyz</a> porro impedit tempore.</p>
        <form class="form">
-           <input type="text" placeholder="Name" required>
-           <input type="email" placeholder="Email" required>
-           <textarea placeholder="Message" required></textarea>
+           <input data-validation-rule="name" type="text" placeholder="Name" required>
+           <input data-validation-rule="email" type="email" placeholder="Email" required>
+           <textarea data-validation-rule="text" placeholder="Message" required></textarea>
            <button type="submit" class="btn">Send message</button>
        </form>
     </div>
