@@ -5,6 +5,8 @@
 
 .form > label {
     font-size: 0;
+    display: inline-block;
+    float: left;
 }
 
 .form > input,
