@@ -80,6 +80,7 @@ main .block-title {
 main .block-description {
     margin-bottom: 30px;
     font-size: 18px;
+    line-height: 26px;
 }
 
 main .block-description > a {
