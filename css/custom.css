@@ -129,6 +129,16 @@ footer.container {
     padding-top: 0;
 }
 
+.container > .back-to-top {
+    position: relative;
+}
+
+.container > .back-to-top > .btn {
+    position: absolute;
+    top: -25px;
+    right: -11px;
+}
+
 .container > .socials {
     padding: 15px 0;
     border-bottom: 2px solid #fff;

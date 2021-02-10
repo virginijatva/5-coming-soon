@@ -33,7 +33,7 @@
             <div class="clock"></div>
             <form class="form">
                 <label for="name">Name</label>
-                <input data-validation-rule="email" type="email" placeholder="Type your email" required>
+                <input id="name" data-validation-rule="email" type="email" placeholder="Type your email" required>
                 <button type="submit" class="btn">Subscribe now</button>
             </form>
             <div class="mouse">
@@ -56,11 +56,11 @@
         <p class="block-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores alias perferendis nihil eos fuga soluta <a href="mailto:24-grupe@programuotojai.xyz">24&#8209;grupe@programuotojai.xyz</a> porro impedit tempore.</p>
        <form class="form">
            <label for="msg-name">Name</label>
-           <input data-validation-rule="name" type="text" placeholder="Name" required>
+           <input id="msg-name" data-validation-rule="name" type="text" placeholder="Name" required>
            <label for="msg-email">E-mail</label>
-           <input data-validation-rule="email" type="email" placeholder="Email" required>
+           <input id="msg-email" data-validation-rule="email" type="email" placeholder="Email" required>
            <label for="msg">Message</label>
-           <textarea data-validation-rule="text" placeholder="Message" required></textarea>
+           <textarea id="msg" data-validation-rule="text" placeholder="Message" required></textarea>
            <button type="submit" class="btn">Send message</button>
        </form>
     </div>
@@ -68,6 +68,9 @@
     </main>
 
     <footer class="container bg-main">
+        <div class="row back-to-top">
+            <a href="#" class="btn fa fa-angle-up"></a>
+        </div>
         <div class="row socials"></div>
         <div class="short-row">
             <img class="footer-logo" src="./img/white-logo.png" alt="Footer logo"> 

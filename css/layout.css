@@ -7,6 +7,7 @@
 .container > .row{
     display: inline-block;
     width: 1000px;
+    float: left;
     margin: 0 calc(50% - 500px);
 }
 
