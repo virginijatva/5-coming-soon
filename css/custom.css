@@ -7,8 +7,12 @@
 /* hero section */
 
 .hero {
+    min-height: 100vh;
     text-align: center;
     padding-bottom: 30px;
+    background-image: url(../img/virsus.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .hero .logo {
@@ -97,7 +101,7 @@ main .block-description > a:hover {
 
 @media (min-width: 1100px) {
     .right-column .form > input {
-        width: calc(50% - 10px);
+        width: calc(50% - 15px);
         float: left;
 
     }
@@ -132,11 +136,16 @@ footer.container {
 
 .socials > .fa {
     width: 40px;
+    height: 40px;
     line-height: 40px;
-    font-size: 20px;
+    font-size: 0;
     color: #fff;
     border-radius: 50%;
     transition: all 0.5s;
+}
+
+.socials > .fa::before {
+    font-size: 20px;
 }
 
 .socials > .fa:hover {

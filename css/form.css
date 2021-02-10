@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+.form > label {
+    font-size: 0;
+}
+
 .form > input,
 .form > textarea
  {
