@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lets make this website great!">
     <title>Coming soon</title>
     <!-- init -->
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <!-- 3rd party -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png" sizes="18x18">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <!-- components -->
     <link rel="stylesheet" href="./css/layout.css">
@@ -27,7 +32,9 @@
             <p class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea maiores dolorem facilis vero atque eos culpa? Dolores quibusdam dolor aliquam.</p>
             <div class="clock"></div>
             <form class="form">
-                SUBSCRIBE FORM
+                <label for="name">Name</label>
+                <input id="name" data-validation-rule="email" type="email" placeholder="Type your email" required>
+                <button type="submit" class="btn">Subscribe now</button>
             </form>
             <div class="mouse">
                 <div class="wheel"></div>
@@ -35,7 +42,7 @@
         </div>
     </section>
 
-    <main class="container">
+    <main id="main" class="container">
         <div class="row">
        <div class="left-column">
            <h2 class="block-title">About startup</h2>
@@ -47,14 +54,23 @@
        <div class="right-column">
         <h2 class="block-title">Have any question?</h2>
         <p class="block-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores alias perferendis nihil eos fuga soluta <a href="mailto:24-grupe@programuotojai.xyz">24&#8209;grupe@programuotojai.xyz</a> porro impedit tempore.</p>
-       <form>
-           MESSAGE FORM
+       <form class="form">
+           <label for="msg-name">Name</label>
+           <input id="msg-name" data-validation-rule="name" type="text" placeholder="Name" required>
+           <label for="msg-email">E-mail</label>
+           <input id="msg-email" data-validation-rule="email" type="email" placeholder="Email" required>
+           <label for="msg">Message</label>
+           <textarea id="msg" data-validation-rule="text" placeholder="Message" required></textarea>
+           <button type="submit" class="btn">Send message</button>
        </form>
     </div>
         </div>
     </main>
 
-    <footer class="container bg-main">
+    <footer id="footer" class="container bg-main">
+        <div class="row back-to-top">
+            <a href="#" class="btn fa fa-angle-up"></a>
+        </div>
         <div class="row socials"></div>
         <div class="short-row">
             <img class="footer-logo" src="./img/white-logo.png" alt="Footer logo"> 
