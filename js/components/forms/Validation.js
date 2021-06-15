@@ -3,28 +3,28 @@ class Validation {
     static isValidName(name) {
         // netuscias tekstas
         if (!Validation.isNonEmptyText(name)) {
-            return 'Vardas turi buti ne tuscias.';
+            return Toast.show('Name field cannot be empty.', 'error');
         }
         // nei prieky, nei gale negali buti tarpu
         if (!Validation.noSpacesAroundText(name)) {
-            return 'Vardo priekyje ir gale negali buti tarpu';
+            return Toast.show('Name field cannot contain empty spaces.', 'error');
         }
         // negali buti daugiau nei vienas zodis (nera tarpu)
         if(!Validation.isSingleWord(name)) {
-            return 'Vardas turi buti vienas zodis';
+            return Toast.show('Name has to be one word.', 'error');
         }
         //pirma raide didzioji
         if (!Validation.isFirstLetterUppercase(name)) {
-            return 'Vardo pirmoji raide turi buti didzioji';
+            return Toast.show('Name first letter has to be uppercase.', 'error');
         }
 
         //visos likusios tik mazosios
         if (!Validation.isLowercaseButFirst(name)) {
-            return 'Vardo visos raides, iskyrus pirmaja, turi buti mazosios.';
+            return Toast.show('Name field cannot be empty.', 'error');
         }
         //sudarytas tik is raidziu (nekreipiant demesio i tikslias abeceles)
         if (!Validation.onlyAlphabetLetters(name)) {
-            return 'Varde gali buti tik abeceles raides';
+            return Toast.show('Please, use only Alphabet Letters in the name.', 'error');
         }
         //tik abeceles raides (galimybe nurodyti, kokios raides priimtinos)
         return true;
@@ -33,36 +33,36 @@ class Validation {
     static isValidEmail (email) {
         // netuscias tekstas
         if (!Validation.isNonEmptyText(email)) {
-            return 'Email turi buti ne tuscias.';
+            return Toast.show('Email field cannot be empty.', 'error');
         }
 
         // nei prieky, nei gale negali buti tarpu
         if (!Validation.noSpacesAroundText(email)) {
-            return 'El. paste priekyje ir gale negali buti tarpu';
+            return Toast.show('Email field cannot containt empty spaces.', 'error');
         }
         //butinas ir tik vienas @ simbolis
         if (!Validation.textContainsLetter(email, '@')) {
-            return ' El. pastas turi tureti viena @ simboli.';
+            return Toast.show('Email field has to contain @ symbol.', 'error');
         }
 
         const emailParts = email.split('@');
         //pries @ (lokali dalis) turi buti netuscias tekstas
         //uztenka patikrinti, kad pirmas simbolis nera @
         if (!Validation.isNonEmptyText(emailParts[0])) {
-            return 'El. pasto lokali dalis turi buti ne tuscia.';
+            return Toast.show('Email field local part cannot be empty.', 'error');
         }
 
         //uz @ (domeno dalis) turi buti netuscias tekstas
         //uztenka patikrinti, kad paskutinis simbolis nera @
         if (!Validation.isNonEmptyText(emailParts[1])) {
-            return 'El. pasto domeno dalis turi buti ne tuscia.';
+            return Toast.show('Email field domain part cannot be empty.', 'error');
         }
         return true;
     }
 
     static isValidText (text) {
         if (!Validation.isNonEmptyText(text)) {
-            return 'Tekstas turi buti ne tuscias.';
+            return Toast.show('Text message field cannot be empty.', 'error');
         }
         return true;
     }
@@ -114,11 +114,13 @@ class Validation {
         const lowerCase = text.toLowerCase();
         const size = text.length;
 
-        for (let i=0; i<0; i++) {
+        for (let i=0; i<size; i++) {
             if (upperCase[i] === lowerCase[i]) {
                 return false;
             }
         }
+
+        return true;
     }
 }
 
