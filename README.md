@@ -7,7 +7,7 @@
 
 _24 group website project_
 
-This project is for educational porpuses only. Pull request are welcome, but priority for my real-life students! Thank you for your cooperation!
+This project is for educational purpuses only. Pull request are welcome, but priority for my real-life students! Thank you for your cooperation!
 
 Site published at https://virginijatva.github.io/5-coming-soon/
 
